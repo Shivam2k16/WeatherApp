@@ -9,34 +9,27 @@ import { ApiService } from '../api.service';
 export class HomeComponent implements OnInit {
 weatherData:any[];
 validation:any[];
-offline:any;
 bg_img=new Array<any>(9);
-  constructor(private api:ApiService) {
 
+  constructor(private api:ApiService) {
   		this.weatherData=[{},{},{},{},{},{},{},{},{}];
   		this.validation=[false,false,false,false,false,false,false,false,false];
-  		this.bg_img=['','','','','','','','',''];
-  	
-  	
-  		
-  	
+  		this.bg_img=['','','','','','','','',''];	
   	
    }
 
   ngOnInit() { 
 
 	if(JSON.parse(localStorage.getItem('valid'))){
-  	 	this.bg_img=JSON.parse(localStorage.getItem('img'));
+  	 	 this.bg_img=JSON.parse(localStorage.getItem('img'));
   		 this.weatherData=JSON.parse(localStorage.getItem('weather'));
   		 this.validation=JSON.parse(localStorage.getItem('valid'));
-  		 console.log(this.bg_img);console.log(this.weatherData);console.log(this.validation);console.log("inngoninit");
   	}
 
   	this.api.getData('hey').subscribe(()=>{},(error)=>{
-  		this.offline=true;this.bg_img=JSON.parse(localStorage.getItem('img'));
+  		 this.bg_img=JSON.parse(localStorage.getItem('img'));
   		 this.weatherData=JSON.parse(localStorage.getItem('weather'));
   		 this.validation=JSON.parse(localStorage.getItem('valid'));
-  		 console.log("inngoninit2");
   		});}
 
   getWeatherData(city,i){
