@@ -1,0 +1,22 @@
+.grid{
+	height: 180px;
+	margin: 10px;
+}
+.borderless td, .borderless th {
+   border: none;
+   font-size: 14px;
+   line-height: 10px;
+}
+.wd-60{
+	width: 50%;
+	font-size: 12px;
+	margin: 3px;
+}
+.btn-font{
+	font-size: 12px;
+	width: 40%;
+	margin: 3px;
+}
+.err-font{
+	font-size: 13px;
+}

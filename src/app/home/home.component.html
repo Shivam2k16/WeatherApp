@@ -1,3 +1,40 @@
-<p>
-  home works!
-</p>
+<div class="container">
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6"  *ngFor="let x of weatherData;let i= index">
+      <div class="card grid" [ngStyle]="{ 'background-image': 'url('+bg_img[i]+')'}" (click)='onClick(i)'>
+      <div *ngIf="validation[i]">
+      <input type="text" class="form-control float-left wd-60" placeholder="Search City..." name="city" value="{{x.name}}" #city>
+      <button class="btn btn-primary float-left btn-font" type="submit" (click)="getWeatherData(city.value,i)"><a *ngIf="!x.name">Search</a><a *ngIf="x.name">Edit</a></button>
+      <div *ngIf="x.name" class="table-height">
+      <table class="table table-hover borderless">
+        <tr>
+          <th>City</th>
+          <td>{{x.name}}</td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td>{{x.weather[0].description}}</td>
+        </tr>
+        <tr>
+          <th>Temperature</th>
+          <td>{{x.main.temp}}&#8451;</td>
+        </tr>
+        <tr>
+          <th>Humidity</th>
+          <td> {{x.main.humidity}}</td>
+        </tr>
+      </table>
+      </div>
+      <div *ngIf="x.errorlog">
+        <table class="table table-hover err-font">
+        <tr>
+          <th>Error</th>
+          <td>{{x.errorlog}}</td>
+        </tr>
+        </table>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
