@@ -78,7 +78,7 @@ onClick(i){
 }
 
 
-clear_sky=`https://goodstock.photos/wp-content/uploads/2017/08/Hill-by-Still-Lake-Under-Clear-Sky.jpg`;
+clear_sky=`https://s3.envato.com/files/234922966/preview.jpg`;
 thunderstorm=`https://i2-prod.gloucestershirelive.co.uk/incoming/article2790617.ece/ALTERNATES/s1200/0_Thunderstorm-at-sunset.jpg`;
 rain=`https://static1.squarespace.com/static/5899e78b1b10e35238fba886/t/5bd0e4ca4785d33f58ec3c1c/1540416755583/shutterstock_heavy+rain.jpg?format=750w`;
 haze=`https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AAcub1.img?h=403&w=624&m=6&q=60&o=f&l=f`;
