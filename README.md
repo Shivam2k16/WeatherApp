@@ -26,10 +26,10 @@ Enabled offline use - on refreshing the page, after switching off internet, the 
 
 ## Api and framework
 
-I have used OpenWeatherMap API for api data 
-Bootstrap UI Framework 
-Angular 7 framework 
-I have deployed the application on github pages
+I have used OpenWeatherMap API for api data,
+Bootstrap UI Framework ,
+Angular 7 framework ,
+I have deployed the application on github pages.
 
 ## Development server
 
