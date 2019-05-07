@@ -20,12 +20,6 @@ bg_img=new Array<any>(9);
 
   ngOnInit() { 
 
-	if(JSON.parse(localStorage.getItem('valid'))){
-  	 	 this.bg_img=JSON.parse(localStorage.getItem('img'));
-  		 this.weatherData=JSON.parse(localStorage.getItem('weather'));
-  		 this.validation=JSON.parse(localStorage.getItem('valid'));
-  	}
-
   	this.api.getData('hey').subscribe(()=>{},(error)=>{
   		 this.bg_img=JSON.parse(localStorage.getItem('img'));
   		 this.weatherData=JSON.parse(localStorage.getItem('weather'));
